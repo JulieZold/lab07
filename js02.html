@@ -1,0 +1,29 @@
+<!-- ตัวอย่างที่ 2: การรับค่าจาก input และแสดงผล -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ตัวอย่างที่ 2</title>
+</head>
+
+<body>
+    <!-- สร้าง input field และ button เพื่อรับชื่อผู้ใช้ -->
+    <input type="text" id="nameInput" placeholder="กรุณาใส่ชื่อ" />
+    <button onclick="greetUser()">ทักทาย</button>
+    <p id="greeting"></p>
+
+    <script>
+        // ฟังก์ชันสำหรับการทักทายผู้ใช้
+        function greetUser() {
+            let name = document.getElementById("nameInput").value;
+            // ถ้ามีชื่อผู้ใช้ให้แสดงข้อความทักทาย
+            if (name) {
+                document.getElementById("greeting").textContent = "สวัสดีคุณ " + name;
+            } else {
+                alert("กรุณาใส่ชื่อก่อนครับ/ค่ะ");
+            }
+        }
+    </script>
+</body>
+
+</html>
